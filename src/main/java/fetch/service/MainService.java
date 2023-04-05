@@ -6,6 +6,7 @@ import org.jsoup.nodes.Document;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.util.List;
 
@@ -58,6 +59,23 @@ public class MainService {
             }catch (Exception e){
             }
         });
+        return result.toString();
+    }
+
+    public static String distanceDomain(String domainUrl, String[] urls) {
+        URI domainUri = URI.create(domainUrl);
+        String domainUriHost = domainUri.getHost();
+        StringBuilder result = new StringBuilder();
+        for (String urlStr : urls) {
+            try {
+                URI uri = URI.create(urlStr);
+                if (uri.getHost().contains(domainUriHost)){
+                    result.append(urlStr).append("\n");
+                }
+            }catch (Exception e){
+                System.out.println("异常链接:" + urlStr);
+            }
+        }
         return result.toString();
     }
 }

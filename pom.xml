@@ -24,11 +24,11 @@
         <!--            <artifactId>spring-boot-starter-web</artifactId>-->
         <!--            <version>2.7.0</version>-->
         <!--        </dependency>-->
-            <dependency>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-controls</artifactId>
-                <version>16</version>
-            </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>16</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,8 +49,9 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.47</version>
+            <version>8.0.22</version>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -67,6 +68,10 @@
             <artifactId>jsoup</artifactId>
             <version>1.15.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,6 +80,8 @@
                 <directory>src/main/java/resources</directory>
                 <includes>
                     <include>**/*.fxml</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
                 </includes>
             </resource>
             <resource>

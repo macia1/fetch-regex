@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="789.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fetch.service.MainController">
+<Pane focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="789.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fetch.service.MainController">
    <children>
       <Button fx:id="getBtn" layoutX="407.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleGetAction" prefHeight="23.0" prefWidth="70.0" text="GET" />
       <TextField fx:id="urlField" layoutX="58.0" layoutY="14.0" prefHeight="23.0" prefWidth="321.0" />
@@ -12,9 +12,10 @@
       <Button layoutX="58.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleDistanceDomainAction" prefHeight="23.0" prefWidth="67.0" text="留主域" />
       <Button layoutX="142.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleDelNoticeDomainAction" prefHeight="23.0" prefWidth="67.0" text="去域名" />
       <Button layoutX="225.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleDelTransAction" prefHeight="23.0" prefWidth="67.0" text="去转义" />
-      <CheckBox fx:id="allCheckBox" layoutX="407.0" layoutY="107.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="59.0" text="ALL" />
+      <Button fx:id="patternBtn" layoutX="407.0" layoutY="107.0" mnemonicParsing="false" onAction="#handlePatternFetch" prefHeight="23.0" prefWidth="70.0" text="Pattern" />
       <TextArea fx:id="firstFlow" focusTraversable="true" layoutX="52.0" layoutY="177.0" prefHeight="534.0" prefWidth="482.0" style="-fx-border-color: blue;" />
       <TextArea fx:id="nextFlow" focusTraversable="true" layoutX="583.0" layoutY="177.0" prefHeight="534.0" prefWidth="511.0" style="-fx-border-color: blue;" />
-      <Button layoutX="312.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="23.0" prefWidth="67.0" text="保存" />
+      <Button layoutX="312.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="23.0" prefWidth="67.0" text="入库" />
+      <Button layoutX="58.0" layoutY="142.0" mnemonicParsing="false" onAction="#showTrendChart" prefHeight="23.0" prefWidth="67.0" text="趋势图" />
    </children>
 </Pane>
